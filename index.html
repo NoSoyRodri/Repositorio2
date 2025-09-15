@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+</head>
+<body>
+    <header>
+        <nav>
+
+        </nav>
+    </header>
+    <section class="hero-section">
+        <p class="hero-text">
+            welcome to the best restaurant of south
+        </p>
+        <h1 class="hero-title">
+           BEHIND THE DISHES
+        </h1>
+        <a href="" class="learn-button">
+            learn more
+        </a>
+    </section>
+    <div class="product-title">
+        <p class="product-text">
+            Look at our
+        </p>
+        <h2 class="title-h2">
+            BEST PLATES
+        </h2>
+    </div>
+    
+    <section class="main-section">
+    <div class="product-container">
+        
+         <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="pizza.jpg" alt="pizza" >
+                    <h3 class="product-name">Pizza</h3>
+                    <div class="hover-text">
+        Delicioso pizza artesanal con ingredientes frescos.
+                    </div>
+                </div>
+            </div>
+        <div class="product-card">
+            <div class="image-wrapper">
+                <img src="sandwich.jpg" alt="sandwich" >
+                <h3 class="product-name">sandwich</h3>
+                <div class="hover-text">
+            Delicioso pizza artesanal con ingredientes frescos.
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="image-wrapper">
+                <img src="carne.jpg" alt="carne" >
+                <h3 class="product-name">Carne Asada</h3>
+                <div class="hover-text">
+            Delicioso pizza artesanal con ingredientes frescos.
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="image-wrapper">
+                <img src="vegan.jpg" alt="vegan" >
+                <h3 class="product-name">Vegan wok</h3>
+                <div class="hover-text">
+        Delicioso pizza artesanal con ingredientes frescos.
+                </div>
+            </div>
+        </div>
+        <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="ham.jpg" alt="Hamgurguesa" >
+                    <h3 class="product-name">Hamburguesa</h3>
+                    <div class="hover-text">
+        Delicioso pizza artesanal con ingredientes frescos.
+                     </div>
+                </div>
+            </div>
+        
+    </div>
+    <!--<div class="slider-wrapper"> 
+            <div class="slider">
+                <img src="pizza.jpg" id="slider-1" alt="">
+                <img src="sandwich.jpg" id="slider-2" alt="">
+                <img src="vegan.jpg" id="slider-3" alt="">
+                <img src="ham.jpg" id="slider-4" alt="">
+        </div>
+        <div class="slider-nav">
+            <a href="#slider-1"></a>
+            <a href="#slider-2"></a>
+            <a href="#slider-3"></a>
+            <a href="#slider-4"></a>
+        </div>-->
+        <div class="slider-wrapper"> 
+  <div class="slider">
+    <div class="slide">
+      <img src="pizza.jpg" alt="Pizza">
+      <div class="slide-name">Pizza</div>
+    </div>
+    <div class="slide">
+      <img src="sandwich.jpg" alt="Sandwich">
+      <div class="slide-name">Sandwich</div>
+    </div>
+    <div class="slide">
+      <img src="vegan.jpg" alt="Vegan">
+      <div class="slide-name">Vegan Wok</div>
+    </div>
+    <div class="slide">
+      <img src="ham.jpg" alt="Ham">
+      <div class="slide-name">Hamburguer</div>
+    </div>
+  </div>
+  <div class="slider-nav">
+    <a href="#slider-1"></a>
+    <a href="#slider-2"></a>
+    <a href="#slider-3"></a>
+    <a href="#slider-4"></a>
+  </div>
+</div>
+    </section>
+<section class="contact-section">
+    <div class="contact-title">
+        <h2>CONTACT US</h2>
+    </div>
+        <div class="contact-item">
+            <i class="fa-solid fa-phone contact-i">
+
+            </i>
+            <span class="contact-text">
+                00112244332
+            </span>
+        </div>
+       <div class="contact-item">
+            <i class="fa-solid fa-envelope contact-i">
+            
+            </i>
+            <span class="contact-text">
+                Tienda@mail.com.ar
+            </span>
+        </div>
+        <div class="contact-item">
+            <i class="fa-solid fa-location-dot contact-i">
+
+            </i>
+            <span class="contact-text">
+                Av.example 0000, example
+            </span>
+        </div>
+        <div class="contact-button-container">
+            <a href="">
+                Whatsapp
+            </a>
+        </div>
+    </section>
+<script>
+  // Selecciona todos los links de navegación y el slider
+  const navLinks = document.querySelectorAll('.slider-nav a');
+  const slider = document.querySelector('.slider');
+
+  navLinks.forEach((link, index) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault(); // evita que la página se desplace bruscamente
+
+      // Obtiene la posición horizontal del slide correspondiente
+      const targetSlide = slider.children[index];
+      const leftPos = targetSlide.offsetLeft;
+
+      // Hace scroll horizontal del slider hacia la imagen deseada
+      slider.scrollTo({
+        left: leftPos,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>
