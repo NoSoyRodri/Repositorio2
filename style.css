@@ -48,7 +48,7 @@ html, body {
 ======================== */
 .main-section {
   padding: 4rem;
-  background-color: #1c1f1d;
+  background-color: #181a18;
 }
 
 .product-title {
@@ -59,6 +59,7 @@ html, body {
   padding: 1rem;
   font-size: 60px;
   color: white;
+  background-color: #181a18;
 }
 
 .product-title h2 {
@@ -180,7 +181,7 @@ html, body {
   text-align: center;      
   gap: 1rem;
   padding: 4rem;
-  background-color: #000;
+  background-color: /*#000¨*/#181a18;
   color: white;
 }
 
@@ -276,7 +277,7 @@ html, body {
   text-align: center;      
   gap: 0.2rem;
   padding: 1rem;
-  background-color: #000;
+  background-color: /*#000*/#181a18;
   color: white;
 }
 }
