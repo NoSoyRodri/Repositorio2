@@ -305,6 +305,7 @@ html, body {
     scroll-behavior: smooth;
     box-shadow: 2rem 0rem 8rem #fcf5f526;
     border-radius: 1.5rem;
+     touch-action: none;
   }
 
   .slider::-webkit-scrollbar {
