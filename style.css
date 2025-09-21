@@ -435,9 +435,8 @@ textarea {
         scroll-behavior: smooth;
         box-shadow: 2rem 0rem 8rem #fcf5f526;
         border-radius: 1.5rem;
-        /*touch-action: none;*/
-        scroll-snap-stop: always;
-        scroll-snap-align: start;
+        touch-action: none;
+      
     }
 
     .slider::-webkit-scrollbar {
@@ -457,7 +456,7 @@ textarea {
         flex: 0 0 100%;
         scroll-snap-align: start;
         position: relative;
-       scroll-snap-stop: always;
+
     }
 
     .slider .slide img {
