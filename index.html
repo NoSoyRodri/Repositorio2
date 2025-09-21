@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BehindTheDishes</title>
     <link rel="stylesheet" href="style.css">
-    <head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
 
 </head>
 <body>
@@ -29,10 +30,10 @@
     </section>
     <div class="product-title">
         <p class="product-text">
-            Look at our
+            <span class="highlight">Look </span>at our
         </p>
         <h2 class="title-h2">
-            BEST PLATES
+           <span class="highlight">BEST</span> PLATES
         </h2>
     </div>
     
@@ -51,7 +52,7 @@
         <div class="product-card">
             <div class="image-wrapper">
                 <img src="sandwich.jpg" alt="sandwich" >
-                <h3 class="product-name">sandwich</h3>
+                <h3 class="product-name">Sandwich</h3>
                 <div class="hover-text">
             Delicioso pizza artesanal con ingredientes frescos.
                 </div>
@@ -105,30 +106,40 @@
               <label for=""> Your Message below
                   <textarea name="" id="" placeholder="Hello..."></textarea>
               </label>
+              <input type="submit" name="" id="" class="submit-button">
           </form>
       </div>
 
       <div class="contact-section">
+            <!--<div class="contact-title">
+                <h5>Nuestros datos</h5>
+            </div>-->
           <div class="contact-item">
-              <i class="fa-solid fa-phone contact-i"></i>
-              <span class="contact-text">00112244332</span>
+              <i class="ri-phone-fill contact-i"></i>
+              <p class="contact-text">00112244332</p>
           </div>
           <div class="contact-item">
-              <i class="fa-solid fa-envelope contact-i"></i>
-              <span class="contact-text">Tienda@mail.com.ar</span>
+              <i class="ri-mail-fill contact-i"></i>
+              <p class="contact-text">Tienda@mail.com.ar</p>
           </div>
           <div class="contact-item">
-              <i class="fa-solid fa-location-dot contact-i"></i>
-              <span class="contact-text">Av.example 0000, example</span>
+              <i class="ri-map-pin-fill contact-i"></i>
+              <p class="contact-text">Av.example 0000, example</p>
           </div>
-          <div class="contact-button-container">
-              <a href="">Whatsapp</a>
+          <div class="contact-item">
+              <i class="ri-whatsapp-fill contact-i"></i>
+              <p class="contact-text">Escribinos <a href="">aca</a></p>
           </div>
-      </div>
+        </div>
+        <!--<div class="contact-button-container">
+            <a href="">Whatsapp</a>
+        </div>-->
+        <div id="map" class="map"></div>
   </div>
 </section>
 
 
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script>
   // Selecciona todos los links de navegación y el slider
   const navLinks = document.querySelectorAll('.slider-nav a');
@@ -148,9 +159,29 @@
         behavior: 'smooth'
       });
     });
-  });
+  });  
 </script>
+<script>
+    // Crear el mapa
+    const map = L.map('map').setView([-34.6037, -58.3816], 18); // Buenos Aires
 
+    // Agregar capa de tiles con estilo negro/naranja
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+    // Agregar un marcador naranja
+    var remixIcon = L.divIcon({
+  className: "remix-marker",
+  html: '<i class="ri-map-pin-fill" style="font-size:32px;color:red;"></i>',
+  iconSize: [32, 32],
+  iconAnchor: [16, 32] // el punto que toca el mapa
+});
+
+L.marker([-34.6037, -58.3816], { icon: remixIcon })
+  .addTo(map)
+  .bindPopup("Marcador Remix Icon");
+  </script>
 
 </body>
 </html>
