@@ -126,40 +126,48 @@
   </div>
 </div>
     </section>
-<section class="contact-section">
-    <div class="contact-title">
-        <h2>CONTACT US</h2>
-    </div>
-        <div class="contact-item">
-            <i class="fa-solid fa-phone contact-i">
+     <section class="form-section">
+  <div class="form-title">
+      <h2>CONTACT US</h2>
+  </div>
+  
+  <!-- Contenedor que une formulario y contacto -->
+  <div class="form-info-container">
+      <div class="form-container">
+          <form class="form">
+              <label for=""> Your eMail
+                  <input type="email">
+              </label>
+              <label for=""> Your Name
+                  <input type="text">
+              </label>
+              <label for=""> Your Message below
+                  <textarea name="" id="" placeholder="Hello..."></textarea>
+              </label>
+          </form>
+      </div>
 
-            </i>
-            <span class="contact-text">
-                00112244332
-            </span>
-        </div>
-       <div class="contact-item">
-            <i class="fa-solid fa-envelope contact-i">
-            
-            </i>
-            <span class="contact-text">
-                Tienda@mail.com.ar
-            </span>
-        </div>
-        <div class="contact-item">
-            <i class="fa-solid fa-location-dot contact-i">
+      <div class="contact-section">
+          <div class="contact-item">
+              <i class="fa-solid fa-phone contact-i"></i>
+              <span class="contact-text">00112244332</span>
+          </div>
+          <div class="contact-item">
+              <i class="fa-solid fa-envelope contact-i"></i>
+              <span class="contact-text">Tienda@mail.com.ar</span>
+          </div>
+          <div class="contact-item">
+              <i class="fa-solid fa-location-dot contact-i"></i>
+              <span class="contact-text">Av.example 0000, example</span>
+          </div>
+          <div class="contact-button-container">
+              <a href="">Whatsapp</a>
+          </div>
+      </div>
+  </div>
+</section>
 
-            </i>
-            <span class="contact-text">
-                Av.example 0000, example
-            </span>
-        </div>
-        <div class="contact-button-container">
-            <a href="">
-                Whatsapp
-            </a>
-        </div>
-    </section>
+
 <script>
   // Selecciona todos los links de navegación y el slider
   const navLinks = document.querySelectorAll('.slider-nav a');
