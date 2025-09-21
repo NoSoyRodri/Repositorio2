@@ -68,7 +68,9 @@ body {
 .product-title h2 {
     margin-top: 2rem;
 }
-
+.highlight{
+    color: #D9822B;
+}
 .product-container {
     display: flex;
     flex-wrap: wrap;
@@ -154,7 +156,7 @@ body {
 .learn-button {
     display: inline-block;
     padding: 0.8rem 2rem;
-    background-color: #FF7F50;
+    background-color: #D9822B;
     color: #fff;
     font-weight: bold;
     font-size: 1rem;
@@ -173,7 +175,7 @@ body {
 .contact-button-container a {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: #ff7f50;
+    background-color: #D9822B;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -194,15 +196,16 @@ body {
 /* Contenedor de formulario + contacto */
 .form-title {
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
     font-size: 40px;
+    padding-bottom: 3rem;
 }
 
 .form-info-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
     max-width: 1200px;
 }
@@ -210,9 +213,8 @@ body {
 /* Formulario */
 .form-section {
     background-color: #181a18;
-    min-height: 400px;
+    min-height: 550px;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -220,10 +222,10 @@ body {
 .form-container {
     flex: 1;
     justify-content: center;
-    max-width: 600px;
-    padding: 20px;
+    max-width: 400px;
+    padding: 0px;
     border-radius: 10px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+   
     box-sizing: border-box;
 }
 
@@ -247,7 +249,7 @@ body {
 .form textarea {
     width: 100%;
     padding: 10px;
-    border: 2px solid #ff7f50;
+    border: 2px solid #D9822B;
     border-radius: 15px;
     font-size: 1rem;
     resize: none;
@@ -262,7 +264,7 @@ textarea {
 
 .form input:focus,
 .form textarea:focus {
-    border-color: #ff7f50;
+    border-color: #D9822B;
     outline: none;
     background-color: #fafafa;
     color: #000;
@@ -273,43 +275,50 @@ textarea {
 }
 
 /* Info de contacto con íconos */
+
+.map{
+    min-width: 300px;
+    border: 3px solid #D9822B;
+}
 .contact-section {
-    flex: 1;
+    flex: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
     color: white;
-    width: 600px;
+    max-width: 300px;
     padding: 2rem;
 }
 
 .contact-item {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: start;
     gap: 0.5rem;
     font-size: 1rem;
-    padding: 1rem;
+    padding: 0.5rem;
+    max-width: 300px;
 }
 
 .contact-i {
     font-size: 1.5rem;
-    color: #ff7f50;
+    color: #D9822B;
 }
 
 .contact-button-container {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: start;
     gap: 0.5rem;
     font-size: 1rem;
     padding: 1rem;
+    max-width: 300px;
 }
 
 .contact-button-container a {
     display: inline-block;
     padding: 1rem;
-    background-color: #ff7f50;
+    background-color: #D9822B;
     color: white;
     border-radius: 8px;
     text-decoration: none;
@@ -321,16 +330,27 @@ textarea {
     max-width: 600px;
 }
 
+.contact-item a{
+    text-decoration:none;
+    color: #D9822B;
+}
+
 /* --- Media Queries: Móvil --- */
 @media (max-width: 480px) {
     .form-container {
         padding: 15px; /* menos padding en pantallas pequeñas */
     }
+    .form-section{
+        height: 800px;
+        padding-top: 1rem;
+    }
 
     .form-title {
         text-align: center;
-        margin: auto;
+        align-items: center;
+        margin: 0 auto;
         font-size: 20px;
+        margin-top: 1rem;
     }
 
     .form input,
@@ -338,14 +358,71 @@ textarea {
         font-size: 0.9rem; /* un poco más pequeño en móviles */
     }
 
-    .contact-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        font-size: 1rem;
-        padding: 1rem;
-    }
+    .contact-section {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    max-width: 300px;
+    padding: 0rem;
+    height: 100px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    max-width: 300px;
+}
+
+.contact-i {
+    font-size: 1rem;
+    color: #D9822B;
+}
+
+.contact-button-container {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0rem;
+    max-width: 300px;
+}
+
+.contact-button-container a {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #D9822B;
+    color: white;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 0.2rem;
+}
+.learn-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #D9822B;
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    margin-top: 1.5rem;
+}
+.contact-section {
+    max-width: 600px;
+}
 }
 
 @media (max-width: 768px) {
@@ -374,9 +451,8 @@ textarea {
 
     .form-title {
         text-align: center;
-        margin: auto;
+        margin:  0 auto;
         font-size: 20px;
-        padding: 2rem;
     }
 
     .product-text {
@@ -415,30 +491,6 @@ textarea {
         width: 80%; /* que respete márgenes laterales */
         margin: 0 auto; /* lo centra */
     }
-
-    .contact-section {
-        text-align: center;
-        width: 100%;
-    }
-
-    .contact-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        font-size: 1rem;
-        padding: 1rem;
-    }
-
-    .contact-button-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        font-size: 1rem;
-        padding: 1rem;
-    }
-
     .product-container {
     display: flex;
     flex-wrap: wrap;
@@ -525,4 +577,27 @@ textarea {
         font-size: 15px;
         margin-top: 3rem;
     }
+}
+
+
+#map {
+        height: 250px;
+        width: 250px;
+        border-color: #D9822B;
+        transform: translateY(-5%);
+      }
+
+      .submit-button{
+        width: 20px;
+      }
+
+      button, input[type="submit"] {
+  display: inline-block; /* evita que ocupe todo el ancho */
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid #D9822B;
+  border-radius: 15px;
+  cursor: pointer;
+  max-width: 100px;
+  margin: 0 auto;
 }
